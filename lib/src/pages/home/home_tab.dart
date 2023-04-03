@@ -3,7 +3,7 @@ import 'package:quitanda/src/config/custom_colors.dart';
 // ignore: library_prefixes
 import 'package:badges/badges.dart' as packageBadge;
 import 'package:quitanda/src/pages/home/components/category_tile.dart';
-import 'package:quitanda/src/config/app_data.dart' as appData;
+import 'package:quitanda/src/config/app_data.dart' as app_data;
 import 'package:quitanda/src/pages/home/components/item_tile.dart';
 
 class HomeTab extends StatefulWidget {
@@ -103,16 +103,16 @@ class _HomeTabState extends State<HomeTab> {
                 itemBuilder: (_,index){
                   return CategoryTile(
                     onPressed: () {
-                      setState(){
-                        selectedCategory = appData.categories[index];
-                      }
+                      setState(() {
+                        selectedCategory = app_data.categories[index];
+                      });
                     },
-                    category: appData.categories[index],
-                    isSelected: appData.categories[index] == selectedCategory,
+                    category: app_data.categories[index],
+                    isSelected: app_data.categories[index] == selectedCategory,
                   );
                 },
                 separatorBuilder: (_,index) => const SizedBox(width: 10,),          
-                itemCount: appData.categories.length,
+                itemCount: app_data.categories.length,
               ),
             ),
 
@@ -123,14 +123,14 @@ class _HomeTabState extends State<HomeTab> {
                 physics: const BouncingScrollPhysics(),
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
-                  mainAxisExtent: 10,
+                  mainAxisSpacing: 10,
                   crossAxisSpacing: 10,
                   childAspectRatio: 9 / 11.5,
                 ),
-                itemCount: appData.items.length,
+                itemCount: app_data.items.length,
                 itemBuilder: (_,index){
                   return ItemTile(
-                    item: appData.items[index],
+                    item: app_data.items[index],
                   );
                 },
               ),

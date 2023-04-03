@@ -20,7 +20,7 @@ class ItemTile extends StatelessWidget {
         Card(
           elevation: 1,
           shadowColor: Colors.grey.shade300,
-          shape: RoundedRectangleBorder(
+          shape: RoundedRectangleBorder(  
             borderRadius: BorderRadius.circular(20),
           ),
           child: Padding(
