@@ -26,7 +26,7 @@ class SignInScreen extends StatelessWidget {
                   child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  // Nomedo App
+                  // Nome do App
                    Text.rich(TextSpan(
                       style: const TextStyle(
                         fontSize: 40,
